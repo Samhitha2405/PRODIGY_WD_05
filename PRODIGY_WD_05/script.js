@@ -41,21 +41,23 @@ function updateWeather(data) {
 }
 
 function updateBackground(weather) {
+    const timestamp = new Date().getTime(); // Generate a timestamp
     const weatherConditions = {
-        Clear: 'url(./images/clear.jpg)',
-        Clouds: 'url(./images/cloudy.jpg)',
-        Rain: 'url(./images/rainy.jpg)',
-        Snow: 'url(./images/snowy.jpg)',
-        Thunderstorm: 'url(./images/thunderstorm.jpeg)',
-        Drizzle: 'url(./images/drizzle.jpg)',
-        Mist: 'url(./images/mist.jpeg)',
-        Haze: 'url(./images/haze.jpeg)',
-        Fog: 'url(./images/fog.jpg)'
+        Clear: `url(./images/clear.jpg?${timestamp})`,
+        Clouds: `url(./images/cloudy.jpg?${timestamp})`,
+        Rain: `url(./images/rainy.jpg?${timestamp})`,
+        Snow: `url(./images/snowy.jpg?${timestamp})`,
+        Thunderstorm: `url(./images/thunderstorm.jpeg?${timestamp})`,
+        Drizzle: `url(./images/drizzle.jpg?${timestamp})`,
+        Mist: `url(./images/mist.jpeg?${timestamp})`,
+        Haze: `url(./images/haze.jpeg?${timestamp})`,
+        Fog: `url(./images/fog.jpg?${timestamp})`
     };
 
-    const background = weatherConditions[weather] || 'url(./images/default.jpg)';
+    const background = weatherConditions[weather] || `url(./images/default.jpg?${timestamp})`;
     document.body.style.backgroundImage = background;
 }
+
 function setDefaultBackground() {
     document.body.style.backgroundImage = 'url(./images/default.jpg)';
 }
