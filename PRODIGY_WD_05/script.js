@@ -42,20 +42,20 @@ function updateWeather(data) {
 
 function updateBackground(weather) {
     const weatherConditions = {
-        Clear: 'url(./clear.jpg)',
-        Clouds: 'url(./cloudy.jpg)',
-        Rain: 'url(./rainy.jpg)',
-        Snow: 'url(./snowy.jpg)',
-        Thunderstorm: 'url(./thunderstorm.jpeg)',
-        Drizzle: 'url(./drizzle.jpg)',
-        Mist: 'url(./mist.jpeg)',
-        Haze: 'url(./haze.jpeg)',
-        Fog: 'url(./fog.jpg)'
+        Clear: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/clear.jpg)',
+        Clouds: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/cloudy.jpg)',
+        Rain: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/rainy.jpg)',
+        Snow: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/snowy.jpg)',
+        Thunderstorm: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/thunderstorm.jpeg)',
+        Drizzle: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/drizzle.jpg)',
+        Mist: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/mist.jpeg)',
+        Haze: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/haze.jpeg)',
+        Fog: 'url(./PRODIGY_WD_05/PRODIGY_WD_05/fog.jpg)'
     };
 
-    const background = weatherConditions[weather] || 'url(./default.jpg)';
+    const background = weatherConditions[weather] || 'url(./PRODIGY_WD_05/PRODIGY_WD_05/default.jpg)';
     document.body.style.backgroundImage = background;
 }
 function setDefaultBackground() {
-    document.body.style.backgroundImage = 'url(./default.jpg)';
+    document.body.style.backgroundImage = 'url(./PRODIGY_WD_05/PRODIGY_WD_05/default.jpg)';
 }
