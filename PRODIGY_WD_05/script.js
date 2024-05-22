@@ -42,20 +42,20 @@ function updateWeather(data) {
 
 function updateBackground(weather) {
     const weatherConditions = {
-        Clear: 'url(clear.jpg)',
-        Clouds: 'url(cloudy.jpg)',
-        Rain: 'url(rainy.jpg)',
-        Snow: 'url(snowy.jpg)',
-        Thunderstorm: 'url(thunderstorm.jpeg)',
-        Drizzle: 'url(drizzle.jpg)',
-        Mist: 'url(mist.jpeg)',
-        Haze: 'url(haze.jpeg)',
-        Fog: 'url(fog.jpg)'
+        Clear: 'url(./clear.jpg)',
+        Clouds: 'url(./cloudy.jpg)',
+        Rain: 'url(./rainy.jpg)',
+        Snow: 'url(./snowy.jpg)',
+        Thunderstorm: 'url(./thunderstorm.jpeg)',
+        Drizzle: 'url(./drizzle.jpg)',
+        Mist: 'url(./mist.jpeg)',
+        Haze: 'url(./haze.jpeg)',
+        Fog: 'url(./fog.jpg)'
     };
 
-    const background = weatherConditions[weather] || 'url(default.jpg)';
+    const background = weatherConditions[weather] || 'url(./default.jpg)';
     document.body.style.backgroundImage = background;
 }
 function setDefaultBackground() {
-    document.body.style.backgroundImage = 'url(default.jpg)';
+    document.body.style.backgroundImage = 'url(./default.jpg)';
 }
